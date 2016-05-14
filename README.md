@@ -5,7 +5,7 @@ Home: https://github.com/ckan/ckanapi
 
 Package license: MIT
 
-Feedstock license: BSD
+Feedstock license: BSD 3-Clause
 
 Summary: A command line interface and Python module for accessing the CKAN Action API
 
@@ -69,6 +69,7 @@ Terminology
 
 Current build status
 ====================
+
 Linux: [![Circle CI](https://circleci.com/gh/conda-forge/ckanapi-feedstock.svg?style=svg)](https://circleci.com/gh/conda-forge/ckanapi-feedstock)
 OSX: [![TravisCI](https://travis-ci.org/conda-forge/ckanapi-feedstock.svg?branch=master)](https://travis-ci.org/conda-forge/ckanapi-feedstock) 
 Windows: [![AppVeyor](https://ci.appveyor.com/api/projects/status/github/conda-forge/ckanapi-feedstock?svg=True)](https://ci.appveyor.com/project/conda-forge/ckanapi-feedstock/branch/master)
