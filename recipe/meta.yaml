@@ -1,4 +1,4 @@
-{% set version = "3.5" %}
+{% set version = "3.6" %}
 
 package:
     name: ckanapi
@@ -6,8 +6,8 @@ package:
 
 source:
     fn: ckanapi-{{ version }}.tar.gz
-    url: https://pypi.python.org/packages/source/c/ckanapi/ckanapi-{{ version }}.tar.gz
-    md5: 2ab2508df730b0e7d84e13be74adc314
+    url: https://github.com/ckan/ckanapi/archive/ckanapi-{{ version }}.tar.gz
+    sha256: 96241d06c15afa6d2883ae2438359b4d6b7e59f0b308c13b0497805707935c95
 
 build:
     number: 0
