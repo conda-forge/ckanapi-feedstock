@@ -19,6 +19,7 @@ requirements:
         - setuptools
     run:
         - python
+        - setuptools
         - docopt
         - requests
         - simplejson
@@ -32,7 +33,7 @@ test:
 about:
   home: https://github.com/ckan/ckanapi
   license: MIT
-  summary: A command line interface and Python module for accessing the CKAN Action API
+  summary: 'A command line interface and Python module for accessing the CKAN Action API.'
 
 extra:
     recipe-maintainers:
