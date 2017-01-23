@@ -1,28 +1,28 @@
-{% set version = "3.6" %}
+{% set version = "4.0" %}
 
 package:
-    name: ckanapi
-    version: {{ version }}
+  name: ckanapi
+  version: {{ version }}
 
 source:
-    fn: ckanapi-{{ version }}.tar.gz
-    url: https://github.com/ckan/ckanapi/archive/ckanapi-{{ version }}.tar.gz
-    sha256: 96241d06c15afa6d2883ae2438359b4d6b7e59f0b308c13b0497805707935c95
+  fn: ckanapi-{{ version }}.tar.gz
+  url: https://github.com/ckan/ckanapi/archive/ckanapi-{{ version }}.tar.gz
+  sha256: 765fcee2c08d583542bb3f82324c9fba90e9899ac6f6531d25c1cdca950efc65
 
 build:
-    number: 0
-    script: python setup.py install --single-version-externally-managed --record=record.txt
+  number: 0
+  script: python setup.py install --single-version-externally-managed --record=record.txt
 
 requirements:
-    build:
-        - python
-        - setuptools
-    run:
-        - python
-        - setuptools
-        - docopt
-        - requests
-        - simplejson
+  build:
+    - python
+    - setuptools
+  run:
+    - python
+    - setuptools
+    - docopt
+    - requests
+    - simplejson
 
 test:
   imports:
@@ -33,8 +33,9 @@ test:
 about:
   home: https://github.com/ckan/ckanapi
   license: MIT
+  license_file: COPYING
   summary: 'A command line interface and Python module for accessing the CKAN Action API.'
 
 extra:
-    recipe-maintainers:
-        - ocefpaf
+  recipe-maintainers:
+    - ocefpaf
