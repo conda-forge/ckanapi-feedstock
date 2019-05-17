@@ -10,30 +10,33 @@ source:
 
 build:
   number: 0
-  noarch: python
-  script: python setup.py install --single-version-externally-managed --record=record.txt
+  entry_points:
+    - ckanapi=ckanapi.cli.main:main
+  script: "{{ PYTHON }} -m pip install . --no-deps -vv"
 
 requirements:
   build:
     - python
-    - setuptools
+    - pip
   run:
     - python
     - setuptools
     - docopt
+    - python-slugify >=1.0,<2.0
     - requests
-    - simplejson
+    - setuptools
+    - six >=1.9,<2.0
+    - simplejson  # [py27]
 
 test:
   imports:
     - ckanapi
     - ckanapi.cli
-    - ckanapi.tests
 
 about:
   home: https://github.com/ckan/ckanapi
   license: MIT
-  # license_file: COPYING
+  license_file: COPYING
   summary: 'A command line interface and Python module for accessing the CKAN Action API'
 
 extra:
