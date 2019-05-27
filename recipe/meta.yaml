@@ -1,4 +1,4 @@
-{% set version = "4.2" %}
+{% set version = "4.3" %}
 
 package:
   name: ckanapi
@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/c/ckanapi/ckanapi-{{ version }}.tar.gz
-  sha256: 1b6fa0db215d75e4c5cc8c3b84ed739255aec8692d8fb7075ef5c762180b620b
+  sha256: 4ce10a09ce995dd1b4bb5bad327e10a29c92059dc5014a631a43b7fb053008ce
 
 build:
   number: 0
