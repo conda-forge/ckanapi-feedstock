@@ -9,7 +9,7 @@ source:
   sha256: 4ce10a09ce995dd1b4bb5bad327e10a29c92059dc5014a631a43b7fb053008ce
 
 build:
-  number: 0
+  number: 1
   entry_points:
     - ckanapi=ckanapi.cli.main:main
   script: "{{ PYTHON }} -m pip install . --no-deps -vv"
