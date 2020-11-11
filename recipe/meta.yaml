@@ -1,4 +1,4 @@
-{% set version = "4.3" %}
+{% set version = "4.5" %}
 
 package:
   name: ckanapi
@@ -6,13 +6,13 @@ package:
 
 source:
   url: https://pypi.io/packages/source/c/ckanapi/ckanapi-{{ version }}.tar.gz
-  sha256: 4ce10a09ce995dd1b4bb5bad327e10a29c92059dc5014a631a43b7fb053008ce
+  sha256: 7282865f26696e5b651ba02a8138db5fd6181ec24a7e9ee25d89ac0e988625be
 
 build:
-  number: 2
+  number: 0
   entry_points:
     - ckanapi=ckanapi.cli.main:main
-  script: "{{ PYTHON }} -m pip install . --no-deps -vv"
+  script: {{ PYTHON }} -m pip install . --no-deps -vv
 
 requirements:
   build:
@@ -37,7 +37,7 @@ about:
   home: https://github.com/ckan/ckanapi
   license: MIT
   license_file: COPYING
-  summary: 'A command line interface and Python module for accessing the CKAN Action API'
+  summary: A command line interface and Python module for accessing the CKAN Action API
 
 extra:
   recipe-maintainers:
