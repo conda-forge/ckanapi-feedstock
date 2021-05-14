@@ -1,4 +1,4 @@
-{% set version = "4.5" %}
+{% set version = "4.6" %}
 
 package:
   name: ckanapi
@@ -6,32 +6,36 @@ package:
 
 source:
   url: https://pypi.io/packages/source/c/ckanapi/ckanapi-{{ version }}.tar.gz
-  sha256: 7282865f26696e5b651ba02a8138db5fd6181ec24a7e9ee25d89ac0e988625be
+  sha256: 35361965bfb38c8e146d7229f2d7c3aaf1c0f2ef547de4239b4d38931bf081d2
 
 build:
   number: 0
+  noarch: python
   entry_points:
     - ckanapi=ckanapi.cli.main:main
-  script: {{ PYTHON }} -m pip install . --no-deps -vv
+  script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
-    - python
+    - python >=3.6
     - pip
   run:
-    - python
+    - python >=3.6
     - setuptools
     - docopt
-    - python-slugify >=1.0,<2.0
+    - python-slugify >=1.0
     - requests
     - setuptools
     - six >=1.9,<2.0
-    - simplejson  # [py27]
 
 test:
   imports:
     - ckanapi
     - ckanapi.cli
+  commands:
+    - pip check
+  requires:
+    - pip
 
 about:
   home: https://github.com/ckan/ckanapi
