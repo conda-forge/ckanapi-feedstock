@@ -6,7 +6,7 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/ckanapi-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/ckanapi-{{ version }}.tar.gz
   sha256: 3a98d81e6cb7480883eb1d031740205d3e94176376e9d284d218829d81d0afed
 
 build:
@@ -14,14 +14,14 @@ build:
   entry_points:
     - ckanapi = ckanapi.cli.main:main
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 0
+  number: 1
 
 requirements:
   host:
-    - python >=3.7
+    - python {{ python_min }}
     - pip
   run:
-    - python >=3.7
+    - python >={{ python_min }}
     - setuptools
     - docopt
     - python-slugify >=1.0
@@ -37,6 +37,7 @@ test:
     - ckanapi --help
   requires:
     - pip
+    - python {{ python_min }}
 
 about:
   home: https://github.com/ckan/ckanapi
