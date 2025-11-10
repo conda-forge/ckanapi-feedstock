@@ -1,5 +1,5 @@
 {% set name = "ckanapi" %}
-{% set version = "4.8" %}
+{% set version = "4.9" %}
 
 package:
   name: {{ name|lower }}
@@ -7,14 +7,14 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/ckanapi-{{ version }}.tar.gz
-  sha256: 3a98d81e6cb7480883eb1d031740205d3e94176376e9d284d218829d81d0afed
+  sha256: 4d5d59da939586e9f34324c016f5cbea1f6ab4753f792d45d24379aa79ccbc06
 
 build:
   noarch: python
   entry_points:
     - ckanapi = ckanapi.cli.main:main
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 1
+  number: 0
 
 requirements:
   host:
