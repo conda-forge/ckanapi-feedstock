@@ -1,5 +1,5 @@
 {% set name = "ckanapi" %}
-{% set version = "4.9" %}
+{% set version = "4.10" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/ckanapi-{{ version }}.tar.gz
-  sha256: 4d5d59da939586e9f34324c016f5cbea1f6ab4753f792d45d24379aa79ccbc06
+  sha256: 5691a7cb3d8ff42f16d800f8abd276e26dfd1cbe020103e5057e6179107f7263
 
 build:
   noarch: python
