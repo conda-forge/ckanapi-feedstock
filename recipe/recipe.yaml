@@ -1,7 +1,7 @@
 schema_version: 1
 
 context:
-  version: "4.10"
+  version: "4.11"
 
 package:
   name: ckanapi
@@ -9,7 +9,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/c/ckanapi/ckanapi-${{ version }}.tar.gz
-  sha256: 5691a7cb3d8ff42f16d800f8abd276e26dfd1cbe020103e5057e6179107f7263
+  sha256: 913dc04e23e16dac9357d013eefda797f2ae5b7a5b584077c10b70d7336b467e
 
 build:
   number: 0
